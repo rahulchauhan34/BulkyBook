@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BulkyBook.Models
+{
+    public class Category
+    {   
+        [Key]
+        public int Id { get; set; }// Id if not defined explicty through data annotation as (primary key) will be by default a PK because of identity framework
+        [Display(Name="Category Name")]
+        [Required]
+        [MaxLength(50)]
+        public string Name { get; set; }
+    }
+}
